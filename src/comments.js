@@ -32,7 +32,7 @@ function comments(state = [], action) {
         case THUMB_UP_COMMENT:
             return state.map(comment => {
                 if(comment.id === action.id) {
-                    return {...comment, votes: comments.votes + 1}
+                    return {...comment, votes: comment.votes + 1}
                 }
             return comment;
             });
@@ -40,7 +40,7 @@ function comments(state = [], action) {
         case THUMB_DOWN_COMMENT:
             return state.map(comment => {
                 if(comment.id === action.id) {
-                    return {...comment, votes: comments.votes - 1}
+                    return {...comment, votes: comment.votes - 1}
                 }
                 return comment;
             });

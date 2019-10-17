@@ -1,13 +1,11 @@
 import React from 'react';
-import { addComment } from './actions.js';
-import { thumbUpComment } from './actions.js';
-import { thumbDownComment } from './actions.js';
 
-const Comment = ({text, votes, id, thumbUpComment}) =>
+const Comment = ({text, votes, id, thumbUpComment, thumbDownComment}) =>
     <li>
-        {text}<span>votes: {votes}</span>
+        {text}<span><br />Votes: {votes}</span><br />
         <button onClick={() => thumbUpComment(id)}>Thumb up</button>
         <button onClick={() => thumbDownComment(id)}>Thumb down</button>
+        <br /><br />
     </li>;
 
 export default Comment;

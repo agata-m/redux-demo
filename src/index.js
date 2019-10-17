@@ -20,8 +20,8 @@ ReactDOM.render(
 document.getElementById('root'));
 
 
-store.dispatch(addComment('pierwszy komentarz'));
-store.dispatch(addComment('drugi komentarz'));
+store.dispatch(addComment('First comment'));
+store.dispatch(addComment('Second comment'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
